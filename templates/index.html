@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF2Excel Pro - Advanced AI-Powered Conversion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <main>
+            <!-- Conversion Box -->
+            <div class="converter-box">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 0L37.3205 10V30L20 40L2.67949 30V10L20 0Z" fill="url(#logo-gradient)"/>
+                        <path d="M15 15H25V17H15V15ZM15 20H25V22H15V20ZM15 25H22V27H15V25Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="2.67949" y1="0" x2="37.3205" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#43baa0"/>
+                                <stop offset="1" stop-color="#4a90e2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>CodeXcel</span>
+                </div>
+                
+                <!-- Title and Subtitle -->
+                <h1>Transform PDFs to Excel Effortlessly</h1>
+                <p class="subtitle">AI-powered tool to convert complex PDFs to precise Excel spreadsheets in seconds.</p>
+                
+                <!-- File Upload Form -->
+
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <div class="file-input-wrapper">
+                        <input type="file" name="pdf" id="pdf_file" accept=".pdf" required>
+                        <label for="pdf_file">
+                            <div class="file-input-icon">
+                                <i data-feather="upload-cloud"></i>
+                            </div>
+                            <div class="file-input-text">
+                                <span class="primary">Choose PDF file</span>
+                                <span class="secondary">or drag and drop here</span>
+                            </div>
+                        </label>
+                    </div>
+                    <button type="submit" class="convert-button">
+                        <span>Convert to Excel</span>
+                        <i data-feather="arrow-right"></i>
+                    </button>
+                </form>
+                
+                
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                <!-- Features Section -->
+                <div class="features">
+                    <div class="feature">
+                        <i data-feather="cpu"></i>
+                        <span>AI-Powered Precision</span>
+                    </div>
+                    <div class="feature">
+                        <i data-feather="shield"></i>
+                        <span>Secure File Processing</span>
+                    </div>
+                    <div class="feature">
+                        <i data-feather="check-circle"></i>
+                        <span>99.9% Accuracy</span>
+                    </div>
+                    <div class="feature">
+                        <i data-feather="zap"></i>
+                        <span>Lightning-Fast Conversion</span>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <footer>
+                    <p>&copy; 2025 - A project by <strong>Oeesha</strong>.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Feather Icons Replacement
+        feather.replace();
+
+        // Update the file input label with the selected file name
+        document.getElementById('pdf_file').addEventListener('change', function(e) {
+            var fileName = e.target.files[0].name;
+            document.querySelector('.file-input-text .primary').textContent = fileName;
+            document.querySelector('.file-input-text .secondary').textContent = "Ready to convert";
+        });
+
+
+
+        
+    </script>
+
+
+
+
+    
+</body>
+</html>
